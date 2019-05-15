@@ -1,0 +1,57 @@
+workspace:
+  base: /workspace
+  path: sdfilterdescriptionshopware
+
+pipeline:
+  setup:composer:
+    image: solutiondrive/php-composer:${PHP_VERSION}
+    commands:
+      - ./etc/scripts/prepareComposerJson.sh
+      - composer update -n --no-progress --no-suggest
+    volumes:
+      - /var/cache/composer:/composer/cache
+    secrets: [ composer_auth ]
+
+  test:codingstandards:
+    image: solutiondrive/php-composer:${PHP_VERSION}
+    commands:
+      - ./etc/scripts/checkCodingStandards.sh
+    when:
+      matrix:
+        PHP_VERSION: php7.2
+        SHOPWARE_VERSION: \~5.5.6
+
+  test:spec:
+    image: solutiondrive/php-xdebug:${PHP_VERSION}
+    commands:
+      - vendor/bin/phpspec-standalone.${PHP_VERSION}.phar run --no-code-generation --format=dot
+
+  test:unit:
+    image: solutiondrive/php-xdebug:${PHP_VERSION}
+    commands:
+      - vendor/bin/phpunit -c phpunit_unit.xml.dist
+
+  test:check_structure:
+    image: alpine:latest
+    commands:
+      - ./etc/scripts/checkForCorrectPluginStructure.sh
+
+  notify:mail:
+    image: drillster/drone-email
+    from: ci@solutiondrive.de
+    host: sslout.df.eu
+    when:
+      event: push
+      status: [changed, failure]
+    secrets:
+      - source: ci_email_user
+        target: plugin_username
+      - source: ci_email_password
+        target: plugin_password
+
+matrix:
+  PHP_VERSION:
+    - php7.2
+    - php7.1
+  SHOPWARE_VERSION:
+    - \~5.5.6

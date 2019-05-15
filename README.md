@@ -1,29 +1,26 @@
-# README #
+# sdFilterDescriptionShopware
 
-This README would normally document whatever steps are necessary to get your application up and running.
+## About sdFilterDescriptionShopware
 
-### What is this repository for? ###
+This plugin can append filter description to them related active filter value.
+In Backend can be configured, from which filter the description should be shown.
 
-* Quick summary
-* Version
-* [Learn Markdown](https://bitbucket.org/tutorials/markdowndemo)
+## Running Tests
 
-### How do I get set up? ###
+### phpunit - functional
 
-* Summary of set up
-* Configuration
-* Dependencies
-* Database configuration
-* How to run tests
-* Deployment instructions
+    Not working at the moment because phpunit is functional testing and there is no running shopware installation.
 
-### Contribution guidelines ###
+    $ vendor/bin/phpunit
+    
+### phpunit - unit
 
-* Writing tests
-* Code review
-* Other guidelines
+    $ vendor/bin/phpunit -c phpunit_unit.xml.dist
+    
+### phpspec
 
-### Who do I talk to? ###
+    $ vendor/bin/phpspec-standalone.php7.2.phar
 
-* Repo owner or admin
-* Other community or team contact
+## License
+
+Please see [License File](LICENSE) for more information.
