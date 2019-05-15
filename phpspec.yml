@@ -1,0 +1,6 @@
+suites:
+  default:
+    namespace: sdFilterDescriptionShopware
+    psr4_prefix: sdFilterDescriptionShopware
+    spec_path: ./
+    src_path: ./
