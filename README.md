@@ -3,7 +3,7 @@
 ## About sdFilterDescriptionShopware
 
 With this plugin it is possible to prefix an active filter value with its specific filter description.
-In Backend can be configured, from which filter the description should be shown.
+Via backend you can configure for which filters the description should be displayed.
 
 ## Running Tests
 

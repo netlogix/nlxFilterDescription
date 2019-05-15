@@ -1,6 +1,6 @@
 {
     "name": "solutiondrive/sdfilterdescriptionshopware",
-    "description": "This plugin append filter description to them related active filter value",
+    "description": "With this plugin it is possible to prefix an active filter value with its specific filter description.\n",
     "type": "shopware-plugin",
     "license": "proprietary",
     "authors": [
