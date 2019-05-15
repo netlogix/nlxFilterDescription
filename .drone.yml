@@ -19,7 +19,7 @@ pipeline:
     when:
       matrix:
         PHP_VERSION: php7.2
-        SHOPWARE_VERSION: \~5.5.6
+        SHOPWARE_VERSION: \~5.5.8
 
   test:spec:
     image: solutiondrive/php-xdebug:${PHP_VERSION}
