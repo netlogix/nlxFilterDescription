@@ -30,7 +30,8 @@
                 $.each(me.opts.filtersIdToBePrefix, function (index, filterId) {
                     var filterData = $(filterSelector).data('field-name');
                     if (filterData === filterId) {
-                        me.opts.filtersName[filterId] = $.trim($(filterSelector).find('label[for='+  filterId  +']').text());
+                        var labelText = $(filterSelector).find('label[for='+  filterId  +']').text();
+                        me.opts.filtersName[filterId] = $.trim(labelText);
                     }
                 })
 
@@ -53,7 +54,7 @@
 
         setFilterPrefix: function (data, param, label) {
             $.each(this.opts.filtersName, function (filterId, filterName) {
-                if (param.indexOf(filterId) >= 1) {
+                if (param.indexOf(filterId) !== -1) {
                     data.activeFilterElements[param].html(data.getLabelIcon() + label + ' ' + filterName);
                 }
             })
