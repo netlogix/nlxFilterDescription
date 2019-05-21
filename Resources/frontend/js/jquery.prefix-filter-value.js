@@ -9,8 +9,7 @@
 
             filterComponentSelector: '*[data-filter-type]',
 
-            // This is a temporary list and will be fill in the future by an ajax call or from a data attribute
-            filtersIdToBePrefix: ['bridge_width', 'temple_length', 'smallest_raw_glass_diameter'],
+            filtersIdToBePrefix: [],
 
             filtersName: {},
         },
@@ -19,6 +18,8 @@
             var me = this;
             me.$filterForm = $(me.opts.filterFormSelector);
             me.$filterComponents = me.$filterForm.find(me.opts.filterComponentSelector);
+            // filterPrefixList is a global variable
+            this.opts.filtersIdToBePrefix = filterPrefixList;
             me.assignFiltersName();
             me.onUpdateActiveFilterElement();
             me.onCreateActiveFilterElement();
