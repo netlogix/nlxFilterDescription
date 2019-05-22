@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<config
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="https://raw.githubusercontent.com/shopware/shopware/5.3/engine/Shopware/Components/Plugin/schema/config.xsd"
+>
+    <elements>
+        <element required="true" type="text">
+            <name>sdFilterPrefixList</name>
+            <label lang="de">Filter mit Bezeichnung</label>
+            <label lang="en">Filter with prefix</label>
+            <value>bridge_width, temple_length, smallest_raw_glass_diameter, disk_width, disk_height</value>
+            <description lang="de">Eine Liste von Filtern deren Bezeichnung angezeigt werden sollen (kommagetrennte Liste)</description>
+            <description lang="en">List of filters which description should be displayed (comma separated list)</description>
+        </element>
+    </elements>
+</config>
