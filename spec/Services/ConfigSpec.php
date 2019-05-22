@@ -35,8 +35,7 @@ class ConfigSpec extends ObjectBehavior
 
     public function it_can_get_filter_prefix_list(): void
     {
-        $this
-            ->getFilterPrefixList()
+        $this->getFilterPrefixList()
             ->shouldReturn(['test1', 'test2', 'test3']);
     }
 }
