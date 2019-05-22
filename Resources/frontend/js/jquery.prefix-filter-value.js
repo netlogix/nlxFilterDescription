@@ -56,7 +56,7 @@
         setFilterPrefix: function (data, param, label) {
             $.each(this.opts.filtersName, function (filterId, filterName) {
                 if (param.indexOf(filterId) !== -1) {
-                    data.activeFilterElements[param].html(data.getLabelIcon() + label + ' ' + filterName);
+                    data.activeFilterElements[param].html(data.getLabelIcon() + filterName + ': ' + label);
                 }
             })
         },
