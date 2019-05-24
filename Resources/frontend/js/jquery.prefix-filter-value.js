@@ -16,10 +16,14 @@
 
         init: function () {
             var me = this;
-            me.$filterForm = $(me.opts.filterFormSelector);
-            me.$filterComponents = me.$filterForm.find(me.opts.filterComponentSelector);
+
+            if (typeof filterPrefixList === 'undefined') {
+                return;
+            }
             // filterPrefixList is a global variable
             this.opts.filtersIdToBePrefix = filterPrefixList;
+            me.$filterForm = $(me.opts.filterFormSelector);
+            me.$filterComponents = me.$filterForm.find(me.opts.filterComponentSelector);
             me.assignFiltersName();
             me.onUpdateActiveFilterElement();
             me.onCreateActiveFilterElement();
