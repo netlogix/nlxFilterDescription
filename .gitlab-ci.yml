@@ -25,12 +25,6 @@ cache:
   script:
     - vendor/bin/phpspec-standalone.${PHP_VERSION}.phar run --no-code-generation --format=dot
 
-.phpunit:
-  stage: test
-  image: solutiondrive/php-xdebug:${PHP_VERSION}
-  script:
-    - vendor/bin/phpunit -c phpunit_unit.xml.dist
-
 # START ONLY ON LATEST PHP VERSION
 .codingstandards:
   stage: test
@@ -60,12 +54,6 @@ phpspec:php71_shopware55:
     SHOPWARE_VERSION: \~5.5.10
   extends: .phpspec
 
-phpunit:php71_shopware55:
-  variables:
-    PHP_VERSION: php7.1
-    SHOPWARE_VERSION: \~5.5.10
-  extends: .phpunit
-
 composer:php72_shopware55:
   variables:
     PHP_VERSION: php7.2
@@ -77,12 +65,6 @@ phpspec:php72_shopware55:
     PHP_VERSION: php7.2
     SHOPWARE_VERSION: \~5.5.10
   extends: .phpspec
-
-phpunit:php72_shopware55:
-  variables:
-    PHP_VERSION: php7.2
-    SHOPWARE_VERSION: \~5.5.10
-  extends: .phpunit
 
 codingstandards:php72_shopware55:
   variables:
@@ -108,12 +90,6 @@ phpspec:php71_shopware54:
     SHOPWARE_VERSION: \~5.4.6
   extends: .phpspec
 
-phpunit:php71_shopware54:
-  variables:
-    PHP_VERSION: php7.1
-    SHOPWARE_VERSION: \~5.4.6
-  extends: .phpunit
-
 composer:php72_shopware54:
   variables:
     PHP_VERSION: php7.2
@@ -125,12 +101,6 @@ phpspec:php72_shopware54:
     PHP_VERSION: php7.2
     SHOPWARE_VERSION: \~5.4.6
   extends: .phpspec
-
-phpunit:php72_shopware54:
-  variables:
-    PHP_VERSION: php7.2
-    SHOPWARE_VERSION: \~5.4.6
-  extends: .phpunit
 
 composer:php71_shopware53:
   variables:
@@ -144,12 +114,6 @@ phpspec:php71_shopware53:
     SHOPWARE_VERSION: \~5.3.7
   extends: .phpspec
 
-phpunit:php71_shopware53:
-  variables:
-    PHP_VERSION: php7.1
-    SHOPWARE_VERSION: \~5.3.7
-  extends: .phpunit
-
 composer:php72_shopware53:
   variables:
     PHP_VERSION: php7.2
@@ -161,12 +125,6 @@ phpspec:php72_shopware53:
     PHP_VERSION: php7.2
     SHOPWARE_VERSION: \~5.3.7
   extends: .phpspec
-
-phpunit:php72_shopware53:
-  variables:
-    PHP_VERSION: php7.2
-    SHOPWARE_VERSION: \~5.3.7
-  extends: .phpunit
 
 composer:php71_shopware52:
   variables:
@@ -180,12 +138,6 @@ phpspec:php71_shopware52:
     SHOPWARE_VERSION: \~5.2.27
   extends: .phpspec
 
-phpunit:php71_shopware52:
-  variables:
-    PHP_VERSION: php7.1
-    SHOPWARE_VERSION: \~5.2.27
-  extends: .phpunit
-
 composer:php72_shopware52:
   variables:
     PHP_VERSION: php7.2
@@ -198,9 +150,4 @@ phpspec:php72_shopware52:
     SHOPWARE_VERSION: \~5.2.27
   extends: .phpspec
 
-phpunit:php72_shopware52:
-  variables:
-    PHP_VERSION: php7.2
-    SHOPWARE_VERSION: \~5.2.27
-  extends: .phpunit
 # END MATRIX DEFINITION
