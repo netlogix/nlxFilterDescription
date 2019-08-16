@@ -25,7 +25,7 @@
                 class="sdFilterDescriptionShopware\Subscriber\TemplateRegistration"
         >
             <tag name="shopware.event_subscriber" />
-            <argument>%sdfilterdescriptionshopware.plugin_dir%</argument>
+            <argument>%sd_filter_description_shopware.plugin_dir%</argument>
             <argument type="service" id="template" />
         </service>
         <service
