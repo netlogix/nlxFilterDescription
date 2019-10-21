@@ -31,11 +31,11 @@ class TemplateRegistration implements SubscriberInterface
     public static function getSubscribedEvents()
     {
         return [
-            'Enlight_Controller_Action_PreDispatch' => 'onPreDispatch',
+            'Enlight_Controller_Front_DispatchLoopStartup' => 'onStartDispatch',
         ];
     }
 
-    public function onPreDispatch(): void
+    public function onStartDispatch(): void
     {
         $this->templateManager->addTemplateDir($this->pluginDirectory . '/Resources/views');
     }
