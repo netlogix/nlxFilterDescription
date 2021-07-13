@@ -1,20 +1,20 @@
 <?php
 
-namespace sdFilterDescriptionShopware\Tests;
+namespace nlxFilterDescriptionShopware\Tests;
 
-use sdFilterDescriptionShopware\sdFilterDescriptionShopware as Plugin;
+use nlxFilterDescriptionShopware\nlxFilterDescriptionShopware as Plugin;
 use Shopware\Components\Test\Plugin\TestCase;
 
 class PluginTest extends TestCase
 {
     protected static $ensureLoadedPlugins = [
-        'sdFilterDescriptionShopware' => []
+        'nlxFilterDescriptionShopware' => []
     ];
 
     public function testCanCreateInstance()
     {
         /** @var Plugin $plugin */
-        $plugin = Shopware()->Container()->get('kernel')->getPlugins()['sdFilterDescriptionShopware'];
+        $plugin = Shopware()->Container()->get('kernel')->getPlugins()['nlxFilterDescriptionShopware'];
 
         $this->assertInstanceOf(Plugin::class, $plugin);
     }

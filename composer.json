@@ -1,24 +1,24 @@
 {
-    "name": "solutiondrive/sdfilterdescriptionshopware",
-    "description": "With this plugin it is possible to prefix an active filter value with its specific filter description.\n",
+    "name": "netlogix/nlxfilterdescription",
+    "description": "With this plugin it is possible to prefix an active filter value with its specific filter description.",
     "type": "shopware-plugin",
     "license": "proprietary",
     "authors": [
         {
-            "name": "solutionDrive GmbH",
-            "email": "info@solutiondrive.de"
+            "name": "netlogix GmbH & Co. KG",
+            "email": "websolutions@netlogix.de"
         }
     ],
     "extra": {
-        "installer-name": "sdFilterDescriptionShopware"
+        "installer-name": "nlxFilterDescriptionShopware"
     },
     "autoload": {
         "psr-4": {
-            "sdFilterDescriptionShopware\\": "."
+            "nlxFilterDescriptionShopware\\": "."
         }
     },
     "require": {
-        "php": "^7.0"
+        "php": "^7.1"
     },
     "require-dev": {
         "phpunit/phpunit": "^5.7",

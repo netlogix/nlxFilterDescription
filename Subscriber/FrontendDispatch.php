@@ -2,15 +2,15 @@
 declare(strict_types=1);
 
 /*
- * Created by solutionDrive GmbH
+ * Created by netlogix GmbH & Co. KG
  *
- * @copyright solutionDrive GmbH
+ * @copyright netlogix GmbH & Co. KG
  */
 
-namespace sdFilterDescriptionShopware\Subscriber;
+namespace nlxFilterDescriptionShopware\Subscriber;
 
 use Enlight\Event\SubscriberInterface;
-use sdFilterDescriptionShopware\Services\ConfigInterface;
+use nlxFilterDescriptionShopware\Services\ConfigInterface;
 
 class FrontendDispatch implements SubscriberInterface
 {

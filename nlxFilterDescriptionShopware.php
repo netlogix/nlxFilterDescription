@@ -1,10 +1,10 @@
 <?php
 
-namespace sdFilterDescriptionShopware;
+namespace nlxFilterDescriptionShopware;
 
 use Shopware\Components\Plugin;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 
-class sdFilterDescriptionShopware extends Plugin
+class nlxFilterDescriptionShopware extends Plugin
 {
 }

@@ -1,6 +1,6 @@
-# sdFilterDescriptionShopware
+# nlxFilterDescriptionShopware
 
-## About sdFilterDescriptionShopware
+## About nlxFilterDescriptionShopware
 
 With this plugin it is possible to prefix an active filter value with its specific filter description.
 Via backend you can configure for which filters the description should be displayed.
