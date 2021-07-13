@@ -7,11 +7,11 @@ declare(strict_types=1);
  * @copyright netlogix GmbH & Co. KG
  */
 
-namespace spec\nlxFilterDescriptionShopware\Services;
+namespace spec\nlxFilterDescription\Services;
 
 use PhpSpec\ObjectBehavior;
-use nlxFilterDescriptionShopware\Services\Config;
-use nlxFilterDescriptionShopware\Services\ConfigInterface;
+use nlxFilterDescription\Services\Config;
+use nlxFilterDescription\Services\ConfigInterface;
 
 class ConfigSpec extends ObjectBehavior
 {

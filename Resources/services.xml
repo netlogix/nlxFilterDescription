@@ -9,12 +9,12 @@
                 class="\Shopware\Components\Plugin\CachedConfigReader"
         >
             <factory service="shopware.plugin.cached_config_reader" method="getByPluginName" />
-            <argument type="string">nlxFilterDescriptionShopware</argument>
+            <argument type="string">nlxFilterDescription</argument>
         </service>
         <!-- Services -->
         <service
                 id="nlx.filter_description.services.config"
-                class="nlxFilterDescriptionShopware\Services\Config"
+                class="nlxFilterDescription\Services\Config"
         >
             <argument type="service" id="nlx.filter_description.plugin.config" />
         </service>
@@ -22,7 +22,7 @@
         <!-- Subscriber -->
         <service
                 id="nlx.filter_description.subscriber.template_registration"
-                class="nlxFilterDescriptionShopware\Subscriber\TemplateRegistration"
+                class="nlxFilterDescription\Subscriber\TemplateRegistration"
         >
             <tag name="shopware.event_subscriber" />
             <argument>%nlx_filter_description_shopware.plugin_dir%</argument>
@@ -30,7 +30,7 @@
         </service>
         <service
                 id="nlx.filter_description.subscriber.frontend_dispatch"
-                class="nlxFilterDescriptionShopware\Subscriber\FrontendDispatch"
+                class="nlxFilterDescription\Subscriber\FrontendDispatch"
         >
             <tag name="shopware.event_subscriber" />
             <argument type="service" id="nlx.filter_description.services.config"/>

@@ -7,10 +7,10 @@ declare(strict_types=1);
  * @copyright netlogix GmbH & Co. KG
  */
 
-namespace nlxFilterDescriptionShopware\Subscriber;
+namespace nlxFilterDescription\Subscriber;
 
 use Enlight\Event\SubscriberInterface;
-use nlxFilterDescriptionShopware\Services\ConfigInterface;
+use nlxFilterDescription\Services\ConfigInterface;
 
 class FrontendDispatch implements SubscriberInterface
 {

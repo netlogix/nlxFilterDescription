@@ -7,7 +7,7 @@ declare(strict_types=1);
  * @copyright netlogix GmbH & Co. KG
  */
 
-namespace nlxFilterDescriptionShopware\Services;
+namespace nlxFilterDescription\Services;
 
 interface ConfigInterface
 {

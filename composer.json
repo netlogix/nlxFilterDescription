@@ -10,11 +10,11 @@
         }
     ],
     "extra": {
-        "installer-name": "nlxFilterDescriptionShopware"
+        "installer-name": "nlxFilterDescription"
     },
     "autoload": {
         "psr-4": {
-            "nlxFilterDescriptionShopware\\": "."
+            "nlxFilterDescription\\": "."
         }
     },
     "require": {
