@@ -2,12 +2,12 @@
 declare(strict_types=1);
 
 /*
- * Created by solutionDrive GmbH
+ * Created by netlogix GmbH & Co. KG
  *
- * @copyright solutionDrive GmbH
+ * @copyright netlogix GmbH & Co. KG
  */
 
-namespace sdFilterDescriptionShopware\Subscriber;
+namespace nlxFilterDescription\Subscriber;
 
 use Enlight\Event\SubscriberInterface;
 

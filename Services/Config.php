@@ -2,12 +2,12 @@
 declare(strict_types=1);
 
 /*
- * Created by solutionDrive GmbH
+ * Created by netlogix GmbH & Co. KG
  *
- * @copyright solutionDrive GmbH
+ * @copyright netlogix GmbH & Co. KG
  */
 
-namespace sdFilterDescriptionShopware\Services;
+namespace nlxFilterDescription\Services;
 
 class Config implements ConfigInterface
 {
@@ -37,7 +37,7 @@ class Config implements ConfigInterface
 
     private function initConfig(): void
     {
-        $this->filterPrefixList = \explode(',', $this->pluginConfig['sdFilterPrefixList']);
+        $this->filterPrefixList = \explode(',', $this->pluginConfig['nlxFilterPrefixList']);
         \array_walk(
             $this->filterPrefixList,
             function (&$value): void {

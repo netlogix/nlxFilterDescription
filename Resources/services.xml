@@ -5,35 +5,35 @@
     <services>
         <!-- PluginConfig -->
         <service
-                id="sd.filter_description.plugin.config"
+                id="nlx.filter_description.plugin.config"
                 class="\Shopware\Components\Plugin\CachedConfigReader"
         >
             <factory service="shopware.plugin.cached_config_reader" method="getByPluginName" />
-            <argument type="string">sdFilterDescriptionShopware</argument>
+            <argument type="string">nlxFilterDescription</argument>
         </service>
         <!-- Services -->
         <service
-                id="sd.filter_description.services.config"
-                class="sdFilterDescriptionShopware\Services\Config"
+                id="nlx.filter_description.services.config"
+                class="nlxFilterDescription\Services\Config"
         >
-            <argument type="service" id="sd.filter_description.plugin.config" />
+            <argument type="service" id="nlx.filter_description.plugin.config" />
         </service>
 
         <!-- Subscriber -->
         <service
-                id="sd.filter_description.subscriber.template_registration"
-                class="sdFilterDescriptionShopware\Subscriber\TemplateRegistration"
+                id="nlx.filter_description.subscriber.template_registration"
+                class="nlxFilterDescription\Subscriber\TemplateRegistration"
         >
             <tag name="shopware.event_subscriber" />
-            <argument>%sd_filter_description_shopware.plugin_dir%</argument>
+            <argument>%nlx_filter_description_shopware.plugin_dir%</argument>
             <argument type="service" id="template" />
         </service>
         <service
-                id="sd.filter_description.subscriber.frontend_dispatch"
-                class="sdFilterDescriptionShopware\Subscriber\FrontendDispatch"
+                id="nlx.filter_description.subscriber.frontend_dispatch"
+                class="nlxFilterDescription\Subscriber\FrontendDispatch"
         >
             <tag name="shopware.event_subscriber" />
-            <argument type="service" id="sd.filter_description.services.config"/>
+            <argument type="service" id="nlx.filter_description.services.config"/>
         </service>
     </services>
 </container>

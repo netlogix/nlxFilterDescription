@@ -5,7 +5,7 @@
 >
     <elements>
         <element required="true" type="text">
-            <name>sdFilterPrefixList</name>
+            <name>nlxFilterPrefixList</name>
             <label lang="de">Filter mit Bezeichnung</label>
             <label lang="en">Filter with prefix</label>
             <value>bridge_width, temple_length, smallest_raw_glass_diameter, disk_width, disk_height</value>

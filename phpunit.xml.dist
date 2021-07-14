@@ -12,7 +12,7 @@
          verbose="true">
 
     <testsuites>
-        <testsuite name="sdFilterDescriptionShopware_AllTests">
+        <testsuite name="nlxFilterDescription_AllTests">
             <directory>./tests/Unit</directory>
             <directory>./tests/Functional</directory>
         </testsuite>

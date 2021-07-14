@@ -1,6 +1,6 @@
 suites:
   default:
-    namespace: sdFilterDescriptionShopware
-    psr4_prefix: sdFilterDescriptionShopware
+    namespace: nlxFilterDescription
+    psr4_prefix: nlxFilterDescription
     spec_path: ./
     src_path: ./

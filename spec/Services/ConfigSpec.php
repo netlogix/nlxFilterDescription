@@ -2,23 +2,23 @@
 declare(strict_types=1);
 
 /*
- * Created by solutionDrive GmbH
+ * Created by netlogix GmbH & Co. KG
  *
- * @copyright solutionDrive GmbH
+ * @copyright netlogix GmbH & Co. KG
  */
 
-namespace spec\sdFilterDescriptionShopware\Services;
+namespace spec\nlxFilterDescription\Services;
 
 use PhpSpec\ObjectBehavior;
-use sdFilterDescriptionShopware\Services\Config;
-use sdFilterDescriptionShopware\Services\ConfigInterface;
+use nlxFilterDescription\Services\Config;
+use nlxFilterDescription\Services\ConfigInterface;
 
 class ConfigSpec extends ObjectBehavior
 {
     public function let(): void
     {
         $pluginConfig = [
-            'sdFilterPrefixList' => 'test1, test2 ,  test3 ',
+            'nlxFilterPrefixList' => 'test1, test2 ,  test3 ',
         ];
         $this->beConstructedWith($pluginConfig);
     }
