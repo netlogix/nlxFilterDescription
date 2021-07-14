@@ -25,7 +25,7 @@
                 class="nlxFilterDescription\Subscriber\TemplateRegistration"
         >
             <tag name="shopware.event_subscriber" />
-            <argument>%nlx_filter_description_shopware.plugin_dir%</argument>
+            <argument>%nlx_filter_description.plugin_dir%</argument>
             <argument type="service" id="template" />
         </service>
         <service
