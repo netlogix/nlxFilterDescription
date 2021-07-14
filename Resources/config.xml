@@ -8,7 +8,6 @@
             <name>nlxFilterPrefixList</name>
             <label lang="de">Filter mit Bezeichnung</label>
             <label lang="en">Filter with prefix</label>
-            <value>bridge_width, temple_length, smallest_raw_glass_diameter, disk_width, disk_height</value>
             <description lang="de">Eine Liste von Filtern deren Bezeichnung angezeigt werden sollen (kommagetrennte Liste)</description>
             <description lang="en">List of filters which description should be displayed (comma separated list)</description>
         </element>
