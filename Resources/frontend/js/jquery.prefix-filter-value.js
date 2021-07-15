@@ -24,6 +24,7 @@
             this.opts.filtersIdToBePrefix = filterPrefixList;
             me.$filterForm = $(me.opts.filterFormSelector);
             me.$filterComponents = me.$filterForm.find(me.opts.filterComponentSelector);
+
             me.assignFiltersName();
             me.onUpdateActiveFilterElement();
             me.onCreateActiveFilterElement();
@@ -34,13 +35,29 @@
             $.each(me.$filterComponents, function (index, filterSelector) {
                 $.each(me.opts.filtersIdToBePrefix, function (index, filterId) {
                     var filterData = $(filterSelector).data('field-name');
-                    if (filterData === filterId) {
-                        var labelText = $(filterSelector).find('label[for='+  filterId  +']').text();
-                        me.opts.filtersName[filterId] = $.trim(labelText);
+                    if (filterData !== filterId) {
+                        return;
                     }
+                    me.assign(filterSelector, filterId);
                 })
 
             })
+        },
+
+        assign: function (filterSelector, filterId) {
+            var me = this,
+                labelText = $(filterSelector).find('label[for='+  filterId  +']').text(),
+                filterIndex = filterId + '_' + labelText;
+
+            me.opts.filtersName[filterIndex] = {text: $.trim(labelText), names: []};
+
+            $(filterSelector).find('input').each(function () {
+                var filterName = $(this).attr('name');
+
+                if (null != filterName) {
+                    me.opts.filtersName[filterIndex]['names'].push(filterName);
+                }
+            });
         },
 
         onUpdateActiveFilterElement: function () {
@@ -58,10 +75,11 @@
         },
 
         setFilterPrefix: function (data, param, label) {
-            $.each(this.opts.filtersName, function (filterId, filterName) {
-                if (param.indexOf(filterId) !== -1) {
-                    data.activeFilterElements[param].html(data.getLabelIcon() + filterName + ': ' + label);
+            $.each(this.opts.filtersName, function (index, filterData) {
+                if ($.inArray(param, filterData['names']) === -1) {
+                    return;
                 }
+                data.activeFilterElements[param].html(data.getLabelIcon() + filterData['text'] + ': ' + label);
             })
         },
     });
