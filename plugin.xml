@@ -3,7 +3,7 @@
         xsi:noNamespaceSchemaLocation="../../../engine/Shopware/Components/Plugin/schema/plugin.xsd">
     <label lang="de">nlxFilterDescription</label>
     <label lang="en">nlxFilterDescription</label>
-    <version>2.0.0</version>
+    <version>2.1.0</version>
     <copyright>(c) by netlogix GmbH &amp; Co. KG</copyright>
     <license>Proprietary</license>
     <link>https://websolutions.netlogix.de/</link>
@@ -18,5 +18,9 @@
     <changelog version="2.0.0">
         <changes lang="de">Plugin zu Netlogix Struktur migriert</changes>
         <changes lang="en">Plugin migrated to Netlogix structure</changes>
+    </changelog>
+    <changelog version="2.1.0">
+        <changes lang="de">Zeige die Beschreibung auch bei aktiven Filtern an, deren Facet auf der Seite mehrmals definiert ist z.B. Eigenschaften (Größen, Farbe)</changes>
+        <changes lang="en">Show the description also for active filters whose facet is defined several times on the page e.g. properties (size, color)</changes>
     </changelog>
 </plugin>
