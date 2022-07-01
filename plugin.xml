@@ -9,6 +9,13 @@
     <link>https://websolutions.netlogix.de/</link>
     <author>netlogix GmbH &amp; Co. KG</author>
 
+    <description lang="de">
+        Plugin, um aktive Filter mit einem Prefix zu versehen (Anzeige Label bei Filterergebnissen, z.B. Größe: 12)
+    </description>
+    <description lang="en">
+        Plugin to add a prefix to active filters (display label for filter results, e.g. size: 12)
+    </description>
+
     <compatibility minVersion="5.2.0" />
 
     <changelog version="1.0.0">
@@ -22,5 +29,9 @@
     <changelog version="2.1.0">
         <changes lang="de">Zeige die Beschreibung auch bei aktiven Filtern an, deren Facet auf der Seite mehrmals definiert ist z.B. Eigenschaften (Größen, Farbe)</changes>
         <changes lang="en">Show the description also for active filters whose facet is defined several times on the page e.g. properties (size, color)</changes>
+    </changelog>
+    <changelog version="2.2.0">
+        <changes lang="de">Plugin Beschreibung hinzugefügt</changes>
+        <changes lang="en">Added plugin description</changes>
     </changelog>
 </plugin>
