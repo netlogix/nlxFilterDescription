@@ -3,7 +3,7 @@
         xsi:noNamespaceSchemaLocation="../../../engine/Shopware/Components/Plugin/schema/plugin.xsd">
     <label lang="de">nlxFilterDescription</label>
     <label lang="en">nlxFilterDescription</label>
-    <version>2.2.0</version>
+    <version>2.3.0</version>
     <copyright>(c) by netlogix GmbH &amp; Co. KG</copyright>
     <license>Proprietary</license>
     <link>https://websolutions.netlogix.de/</link>
@@ -16,7 +16,7 @@
         Plugin to add a prefix to active filters (display label for filter results, e.g. size: 12)
     </description>
 
-    <compatibility minVersion="5.2.0" />
+    <compatibility minVersion="5.6.0" />
 
     <changelog version="1.0.0">
         <changes lang="de">Erste Veröffentlichung</changes>
@@ -33,5 +33,9 @@
     <changelog version="2.2.0">
         <changes lang="de">Plugin Beschreibung hinzugefügt</changes>
         <changes lang="en">Added plugin description</changes>
+    </changelog>
+    <changelog version="2.3.0">
+        <changes lang="de">Shopware 5.7.7 support. Github Actions hinzugefügt</changes>
+        <changes lang="en">Shopware 5.7.7 support. Added github actions</changes>
     </changelog>
 </plugin>
