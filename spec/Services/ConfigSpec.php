@@ -9,9 +9,9 @@ declare(strict_types=1);
 
 namespace spec\nlxFilterDescription\Services;
 
-use PhpSpec\ObjectBehavior;
 use nlxFilterDescription\Services\Config;
 use nlxFilterDescription\Services\ConfigInterface;
+use PhpSpec\ObjectBehavior;
 
 class ConfigSpec extends ObjectBehavior
 {

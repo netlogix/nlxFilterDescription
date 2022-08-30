@@ -3,7 +3,7 @@
         xsi:noNamespaceSchemaLocation="../../../engine/Shopware/Components/Plugin/schema/plugin.xsd">
     <label lang="de">nlxFilterDescription</label>
     <label lang="en">nlxFilterDescription</label>
-    <version>2.2.0</version>
+    <version>2.3.0</version>
     <copyright>(c) by netlogix GmbH &amp; Co. KG</copyright>
     <license>Proprietary</license>
     <link>https://websolutions.netlogix.de/</link>
@@ -33,5 +33,9 @@
     <changelog version="2.2.0">
         <changes lang="de">Plugin Beschreibung hinzugefügt</changes>
         <changes lang="en">Added plugin description</changes>
+    </changelog>
+    <changelog version="2.3.0">
+        <changes lang="de">Shopware 5.7.7 support</changes>
+        <changes lang="en">Shopware 5.7.7 support</changes>
     </changelog>
 </plugin>
