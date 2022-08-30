@@ -16,7 +16,7 @@
         Plugin to add a prefix to active filters (display label for filter results, e.g. size: 12)
     </description>
 
-    <compatibility minVersion="5.2.0" />
+    <compatibility minVersion="5.6.0" />
 
     <changelog version="1.0.0">
         <changes lang="de">Erste Veröffentlichung</changes>
@@ -35,7 +35,7 @@
         <changes lang="en">Added plugin description</changes>
     </changelog>
     <changelog version="2.3.0">
-        <changes lang="de">Shopware 5.7.7 support</changes>
-        <changes lang="en">Shopware 5.7.7 support</changes>
+        <changes lang="de">Shopware 5.7.7 support. Github Actions hinzugefügt</changes>
+        <changes lang="en">Shopware 5.7.7 support. Added github actions</changes>
     </changelog>
 </plugin>
